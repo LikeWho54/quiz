@@ -15,7 +15,7 @@ function App() {
       "nextQuestionBtn": "Inainte",
       "resultPageHeaderText": "Ai terminat. Ai raspuns corect la <correctIndexLength> din <questionLength> intrebari."
     },
-  "quizTitle": "Testeaza-ti cuostintele",
+  "quizTitle": "Testeaza-ti cunostintele",
   "questions": [
  
     {
