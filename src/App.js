@@ -19,16 +19,16 @@ function App() {
   "questions": [
  
     {
-      "question": "Ultimul rege al României este _______",
+      "question": "Care este reședința județului Cluj?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "Ferdinand I",
-        "Carol II",
-        "Michael I",
-        "Mihai I"
+        "Cluj-Napoca",
+        "Turda",
+        "Dej",
+        "Câmpia Turzii"
       ],
-      "correctAnswer": "4",
+      "correctAnswer": "1",
       "messageForCorrectAnswer": "Răspuns corect.",
       "messageForIncorrectAnswer": "Răspuns incorect. Te rugăm să încerci din nou.",
       "explanation": "Mihai I a fost ultimul rege al României, care a domnit între anii 1927-1930 şi 1940-1947.",
@@ -36,12 +36,14 @@ function App() {
     },
     
     {
-      "question": "Ce rol a avut România în Primul Război Mondial?",
+      "question": "Care lanț muntos se ridică în partea de nord a județului Cluj?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "A fost un aliat al Germaniei",
-        "A fost un aliat al Antantei"
+        "Munții Carpați",
+        "Munții Apuseni",
+        "Munții Făgăraș",
+        "Munții Bucegi"
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "Răspuns corect.",
@@ -51,13 +53,14 @@ function App() {
     },
     
     {
-      "question": "Care dintre domnitorii Tarii Romanesti a fost supranumit 'Intemeietorul'",
+      "question": "Care sunt principalele râuri din județul Cluj?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "Basarab I",
-        "Vlad Tepes",
-        "Mircea cel Batran",
+        "Someșul Mic, Someșul Mare și Arieșul",
+        "Dunărea și Tisa",
+        "Oltul și Mureșul",
+        "Prutul și Siretul"
       ],
       "correctAnswer": "1",
       "messageForCorrectAnswer": "Răspuns corect",
@@ -66,30 +69,32 @@ function App() {
       "point": "30"
     },
     {
-      "question": `În ce an au avut loc bătăliile de la Mărăști, Mărășești și Oituz? ”Pe aici nu se trece!” - deviza născută atunci pe câmpul de luptă. 27.000 de români au ținut piept atacurilor germane în cele trei mari bătălii ale Primului Război Mondial.`,
+      "question": `Cum se caracterizează clima din județul Cluj?`,
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "1920",
-        "1917",
-        "1910",
+        "Clima mediteraneană",
+        "Clima tropicală",
+        "Clima temperat-continentală",
+        "Clima arctică"
       ],
-      "correctAnswer": "2",
+      "correctAnswer": "3",
       "messageForCorrectAnswer": "Răspuns corect",
       "messageForIncorrectAnswer": "Răspuns incorect. Te rugăm să încerci din nou.",
       "explanation": "1917",
       "point": "10"
     },
     {
-      "question": `Cine a fost primul prim-ministru din istoria României?`,
+      "question": `Care sunt principalele orașe din județul Cluj, în afara reședinței?`,
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "Mihail Kogalniceanu",
-        "Barbu Catargiu",
-        "Apostol Arsache",
+        "Turda, Dej, Câmpia Turzii și Gherla",
+        "Sibiu, Brașov, Târgu Mureș și Alba Iulia",
+        "Timișoara, Oradea, Arad și Cluj-Napoca",
+        "Iași, Constanța, Galați și Ploiești",
       ],
-      "correctAnswer": "2",
+      "correctAnswer": "1",
       "messageForCorrectAnswer": "Răspuns corect",
       "messageForIncorrectAnswer": "Răspuns incorect. Te rugăm să încerci din nou.",
       "explanation": "Barbu Catargiu",
