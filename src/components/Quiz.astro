@@ -11,7 +11,7 @@
 </form>
 <h1>Rezultate: </h1>
 <div id="results" class="div grid mt-4 grid-cols-4"></div>
-<script>
+<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import {
     getAuth,
@@ -190,7 +190,7 @@ answer: "Dobrogea",
   const quizForm = document.getElementById("quizForm");
   quizForm.addEventListener("submit", submitQuiz);
 </script>
-<script>
+<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import {
     getAuth,
