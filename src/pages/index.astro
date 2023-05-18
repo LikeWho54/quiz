@@ -3,43 +3,6 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import Quiz from "../components/Quiz.astro"
 ---
 
-<script type="module">
-  // Import the functions you need from the SDKs
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-  import {
-    getAuth,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-  } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
-  import {
-    getFirestore,
-    collection,
-    addDoc,
-  } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBqlsV51OOQvOMrLMJM2sEt_gDO4PEO1eo",
-
-    authDomain: "geogr-1272f.firebaseapp.com",
-
-    projectId: "geogr-1272f",
-
-    storageBucket: "geogr-1272f.appspot.com",
-
-    messagingSenderId: "688841716716",
-
-    appId: "1:688841716716:web:1db3822961cbf5628c86c9",
-
-    measurementId: "G-2NKM0324H1",
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getFirestore(app);
-</script>
-
 <DefaultLayout title="Geography Quiz">
 <Quiz/>
 </DefaultLayout>
