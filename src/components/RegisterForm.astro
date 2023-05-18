@@ -1,0 +1,117 @@
+---
+import { Notification } from 'accessible-astro-components'
+import { Icon } from 'astro-icon'
+---
+<form class="login-form space-content" method="post">
+    <!-- Notification component -->
+    <div class="notification" style="display: none;">
+      <div class="icon">
+        <i class="majesticons emoji-sad-line"></i>
+      </div>
+      <p class="size-12">Email/parola incorecte</p>
+    </div>
+    
+    <div class="login-form__controls">
+      <label for="email">Email</label>
+      <input type="email" name="email" required>
+    </div>
+    
+    <div class="login-form__controls">
+      <label for="password">Parola</label>
+      <input type="password" name="password" required>
+    </div>
+    
+    <button class="button color-secondary behavior-full" type="submit">Creeaza cont</button>
+    <a href="/login">Autentificare</a>
+  </form>
+  
+  <!-- JavaScript code -->
+  <script type="module">
+    // Import the functions you need from the SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+
+apiKey: "AIzaSyBqlsV51OOQvOMrLMJM2sEt_gDO4PEO1eo",
+
+authDomain: "geogr-1272f.firebaseapp.com",
+
+projectId: "geogr-1272f",
+
+storageBucket: "geogr-1272f.appspot.com",
+
+messagingSenderId: "688841716716",
+
+appId: "1:688841716716:web:1db3822961cbf5628c86c9",
+
+measurementId: "G-2NKM0324H1"
+
+};
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+  
+    // Variables
+    const form = document.querySelector('.login-form')
+    const notification = form.querySelector('.notification')
+    const emailInput = form.querySelector('input[name="email"]')
+    const passwordInput = form.querySelector('input[name="password"]')
+    const submitButton = form.querySelector('button')
+  
+    // Execution
+    notification.style.display = 'none'
+  
+    submitButton.addEventListener('click', event => {
+      event.preventDefault()
+  
+      const email = emailInput.value
+      const password = passwordInput.value
+  
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(userCredential => {
+          localStorage.setItem('isLoggedIn', 'true')
+          window.location.href = '/'
+        })
+        .catch(error => {
+          notification.style.display = 'flex'
+          console.error(error)
+        })
+    });
+  </script>
+  
+  <!-- CSS styles -->
+  <style lang="scss" is:global>
+    @use '../assets/scss/base/border' as *;
+    @use '../assets/scss/base/space' as *;
+  
+    .login-form {
+      label {
+        display: block;
+        margin-bottom: $space-8;
+      }
+  
+      input {
+        width: 100%;
+        @include radius-small;
+      }
+  
+      input {
+        padding: $space-8;
+        border: 2px solid var(--neutral-600);
+      }
+  
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: $space-4;
+  
+        input {
+          width: auto;
+        }
+      }
+    }
+  </style>
+  
