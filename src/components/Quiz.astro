@@ -10,7 +10,7 @@
   <button type="submit"  class=" text-white rounded px-3 bg-green-500">Verifica</button><h1 id="score_system" class="invisible"></h1>
 </form>
 <h1>Rezultate: </h1>
-<div id="results" class="grid grid-rows-4 grid-flow-col gap-4 div mt-4"></div>
+<div id="results" class="grid grid-rows-2 grid-flow-col gap-4 div mt-4"></div>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import {
@@ -250,7 +250,8 @@ card.className = 'bg-white rounded-lg shadow p-4 mb-4';
 // Create a title element for the document ID
 const title = document.createElement('h2');
 title.className = 'text-xl font-bold mb-2';
- const date = new Date(new Date(docData['timestamp']['nanoseconds']));
+ const date =  new Date(new Date(docData['timestamp']['seconds'] *1000)) 
+ console.log(date)
 const day = date.getDate().toString().padStart(2, '0');
 const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
 const year = date.getFullYear().toString();
